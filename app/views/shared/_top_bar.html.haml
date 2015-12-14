@@ -1,0 +1,12 @@
+%nav.top-bar{ data: { topbar: true }, role: 'navigation' }
+  %ul.title-area
+    %li.name
+      %h1= link_to 'Dashboard', admin_dashboard_path
+    %li.toggle-topbar.menu-icon
+      %a{ href: '#' }
+        %span Menu
+  %section.top-bar-section
+    - if admin_signed_in?
+      %ul.right
+        %li.active
+          = link_to 'Sign Out', destroy_admin_session_path, method: :delete

@@ -1,0 +1,21 @@
+= form_for(@key, method: method) do |f|
+  = render 'shared/form_errors', object: @key
+  .row
+    .large-12.columns
+      .row.collapse.prefix-radius
+        .small-3.columns
+          %span.prefix Code Value
+        .small-9.columns
+          = f.text_field :value, autofocus: true, placeholder: 'Code Value'
+  .row
+    .large-12.columns
+      .row.collapse.prefix-radius
+        .small-3.columns
+          %span.prefix Code Expiry
+        .small-9.columns
+          = f.text_field :expires_after, placeholder: 'Code Expiry', class: 'datepicker'
+  .row
+    .large-12.columns
+      = f.submit 'Submit', class: 'button flat expand'
+    .large-12.columns
+      = link_to 'Back', admin_dashboard_path, class: 'button flat secondary expand'

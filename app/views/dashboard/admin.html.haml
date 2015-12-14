@@ -1,0 +1,18 @@
+.row
+  .large-12.columns
+    %h2 Admin Dashboard
+
+.row
+  .large-12.columns
+    %h4 Pages
+  .large-12.columns
+    = render 'pages/table', pages: @pages
+
+.row
+  .large-12.columns
+    %h4 Access Codes
+  .large-12.columns
+    = render 'access_keys/table', keys: @keys
+.row
+  .large-12.columns
+    = link_to 'New Access Code', new_access_key_path, class: 'button flat expand'

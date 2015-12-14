@@ -1,0 +1,13 @@
+.row
+  .large-12.columns
+    %h2 Access Code
+
+.row
+  .large-12.columns
+    = render 'table', keys: @keys
+
+.row
+  .large-12.columns
+    = link_to 'New Access Code', new_access_key_path, class: 'button flat expand'
+  .large-12.columns
+    = link_to 'Back', admin_dashboard_path, class: 'button expand flat secondary'

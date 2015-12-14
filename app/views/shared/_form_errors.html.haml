@@ -1,0 +1,8 @@
+- if object.errors.any?
+  .row
+    .large-12.columns
+      .alert-box.alert{ data: { alert: true } }
+        %h6.white Oops, your input has errors:
+        %ul
+          - object.errors.full_messages.each do |msg|
+            %li= msg

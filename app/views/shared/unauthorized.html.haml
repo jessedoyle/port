@@ -1,0 +1,16 @@
+- content_for(:title) { 'Access Code Required' }
+.row.access-key-wrapper
+  .medium-8.medium-centered.large-6.large-centered.columns.box
+    %h4
+      %strong This page contains sensitive information.
+    %h5.light The site owner requires that you obtain an access code from them.
+    %h5.light
+      Please
+      = mail_to @contact, 'contact'
+      the content owner to obtain an access code.
+    %br
+    = form_for(@key, method: :post, url: authorize_access_key_path(@key)) do |f|
+      = render 'shared/notifications'
+      = f.text_field :value, placeholder: 'Access Code'
+      = f.submit 'Submit', class: 'button flat expand'
+      = link_to 'Back', root_path, class: 'button secondary expand flat'

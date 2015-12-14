@@ -1,0 +1,16 @@
+%table.static-pages
+  %thead
+    %th{ width: '800' } Name
+    %th{ width: '200' } Visibility
+    %th{ width: '200' } Edit
+  %tbody
+    - pages.each do |page|
+      %tr{ data: { page_id: page.id } }
+        %td= link_to page.name, page.request, target: :_blank
+        %td.visibility= page.visibility
+        %td.edit-link= edit_visibility_link(page)
+    - if pages.empty?
+      %tr
+        %td{ colspan: 3 }
+          There are no static pages found. Add them to
+          %span.label.secondary= @handler.root_path

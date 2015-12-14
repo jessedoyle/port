@@ -1,0 +1,17 @@
+.row
+  .large-12.columns
+    %h2 Forgot Password
+
+= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+  .row
+    .large-12.columns
+      = devise_error_messages!
+  .row
+    .large-12.columns
+      .row.collapse.prefix-radius
+        .small-3.columns
+          %span.prefix Email
+        .small-9.columns
+          = f.email_field :email, autofocus: true, placeholder: 'Email Address'
+    .large-12.columns
+      = f.submit 'Email Reset Instructions', class: 'button expand flat'

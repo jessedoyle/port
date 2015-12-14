@@ -1,0 +1,16 @@
+%table.access-keys
+  %thead
+    %th{ width: '600' } Value
+    %th{ width: '400' } Expires
+    %th{ width: '100' } Edit
+    %th{ width: '100' } Delete
+  %tbody
+    - keys.each do |key|
+      %tr
+        %td= key.value
+        %td= pretty_date(key.expires_after)
+        %td= link_to 'Edit', edit_access_key_path(key)
+        %td= link_to 'Delete', key, method: :delete
+    - if keys.empty?
+      %tr
+        %td{ colspan: 4 } There are no access codes.

@@ -1,0 +1,7 @@
+<% if @page %>
+  var row = $('table.static-pages > tbody > tr[data-page-id="<%= @page.id %>"]');
+  $(row).find('.visibility').text('<%= @page.visibility %>');
+  $(row).find('.edit-link > a').replaceWith('<%= edit_visibility_link(@page) %>');
+<% else %>
+  console.log('Server Error - Page object not found');
+<% end %>
