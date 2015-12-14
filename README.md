@@ -16,11 +16,12 @@ A new Port deployment will display a 404 page at the root url (i.e. `http://loca
 
 Here's a few steps that will setup a new deployment:
 
-1. Create the database: `rake db:create`.
-2. Create an admin account: `rake admin:create[email,password]`.
-3. Copy your static `html` files to the `app/views/static` directory.
-4. Visit `/dashboard` and login using the newly created admin account to update the pages in the database, or call `rake pages:scan`. By default, the main `index.html` file will be publicly viewable.
-5. Presto! You should be able to reach any publicly viewable pages from theor traditional urls.
+1. Execute `bundle install` to install dependencies.
+2. Migrate the database: `rake db:migrate`.
+3. Create an admin account: `rake admin:create[email,password]`.
+4. Copy your static `html` files to the `app/views/static` directory.
+5. Visit `/dashboard` and login using the newly created admin account to update the pages in the database, or call `rake pages:scan`. By default, the main `index.html` file will be publicly viewable.
+6. Presto! You should be able to reach any publicly viewable pages from theor traditional urls.
 
 ### Dashboard
 
