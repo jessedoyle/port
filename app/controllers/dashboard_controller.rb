@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
   before_action :scan_static, only: :admin
 
   def admin
-    @pages = Page.all
+    @pages = Page.all.decorate
     @keys = AccessKey.all
   end
 

@@ -62,19 +62,6 @@ describe Page do
     end
   end
 
-  describe 'other_visibility' do
-    it 'returns Public when visibility is private' do
-      page = create(:page)
-      expect(page.other_visibility).to eq('Public')
-    end
-
-    it 'returns Private when visibility is public' do
-      page = create(:page)
-      page.toggle_visibility!
-      expect(page.other_visibility).to eq('Private')
-    end
-  end
-
   describe 'public?' do
     it 'returns true when public' do
       page = create(:page)
@@ -111,19 +98,6 @@ describe Page do
       vis = page.public
       page.toggle_visibility!
       expect(page.public).to eq(!vis)
-    end
-  end
-
-  describe 'visibility' do
-    it 'returns Private when visibility is private' do
-      page = create(:page)
-      expect(page.visibility).to eq('Private')
-    end
-
-    it 'returns Public when visibility is public' do
-      page = create(:page)
-      page.toggle_visibility!
-      expect(page.visibility).to eq('Public')
     end
   end
 end

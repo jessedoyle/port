@@ -3,8 +3,9 @@ class PagesController < ApplicationController
 
   # PATCH /pages/:page_id/toggle
   def toggle_visibility
-    @page = Page.find(params[:page_id])
-    @page.toggle_visibility!
+    page = Page.find(params[:page_id])
+    page.toggle_visibility!
+    @page = page.decorate
 
     respond_to do |format|
       format.js
