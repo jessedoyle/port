@@ -1,5 +1,7 @@
 ## Port
 
+[![Build Status](https://travis-ci.org/jessedoyle/port.svg?branch=master)](https://travis-ci.org/jessedoyle/port)
+
 Port is a simple Rails application to take static webpages (`html`, `xml`) and bolt-on some basic authorization.
 
 Port provides access to a dashboard that allows an administrator to set particular pages as public or private.
