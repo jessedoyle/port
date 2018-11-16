@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '~> 4.2.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -19,6 +19,14 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'rack', '>= 1.6.11'
+gem 'loofah', '>= 2.2.3'
+gem 'rails-html-sanitizer', '>= 1.0.4'
+gem 'actionpack', '>= 4.2.5.2'
+gem 'actionview', '>= 4.2.7.1'
+gem 'activemodel', '>= 4.2.5.1'
+gem 'activerecord', '>= 4.2.7.1'
+
 gem 'haml', '~> 4.0.7'
 gem 'foundation-rails', '~> 5.5.3.2'
 gem 'devise', '~> 3.4.1'
@@ -27,8 +35,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4.0'
-  gem 'capybara', '~> 2.5.0'
-  gem 'capybara-webkit', '~> 1.7.1'
+  gem 'capybara'
+  gem 'capybara-webkit'
   gem 'database_cleaner', '~> 1.5.1'
   gem 'rack_session_access', '~> 0.1.1'
   gem 'factory_girl_rails', '~> 4.5.0'
@@ -41,4 +49,3 @@ group :development do
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'spring'
 end
-
