@@ -1,11 +1,21 @@
 language: ruby
+dist: trusty
 rvm:
-  - 2.2.3
-script: 'xvfb-run rake 2>/dev/null'
+  - 2.4
+script: xvfb-run bundle exec rake
 env:
   global:
     - BUNDLE_JOBS=4
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-before_install:
-  - sh -c 'if [ -n "$QMAKE" ]; then sudo apt-add-repository -y ppa:ubuntu-sdk-team/ppa && sudo apt-get update && sudo apt-get install libqt5webkit5-dev qtdeclarative5-dev; fi'
+    - QMAKE=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
+addons:
+  apt:
+    sources:
+      - ubuntu-sdk-team
+    packages:
+      - qt5-default
+      - libqt5webkit5-dev
+      - gstreamer1.0-plugins-base
+      - gstreamer1.0-tools
+      - gstreamer1.0-x
 install: bundle
