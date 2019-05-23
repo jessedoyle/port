@@ -23,7 +23,7 @@ RSpec.configure do |config|
   config.include Warden::Test::Helpers
   config.before(:suite) { Warden.test_mode! }
   config.before(:each) { DatabaseCleaner.clean }
-  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :controller
   config.include AdminHelper, type: :feature
   Capybara.javascript_driver = :webkit
   Capybara.server = :webrick

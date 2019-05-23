@@ -4,7 +4,7 @@ describe AccessKeysController do
   context 'admin' do
     before do
       @admin = create(:admin)
-      sign_in :admin, @admin
+      sign_in(@admin, scope: :admin)
     end
 
     describe 'create' do
