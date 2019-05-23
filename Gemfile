@@ -38,7 +38,7 @@ group :development, :test do
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'database_cleaner', '~> 1.5.1'
-  gem 'rack_session_access', '~> 0.1.1'
+  gem 'rack_session_access', '~> 0.2.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'pry'
 end
