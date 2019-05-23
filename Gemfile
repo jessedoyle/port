@@ -27,7 +27,7 @@ gem 'actionview', '>= 4.2.7.1'
 gem 'activemodel', '>= 4.2.5.1'
 gem 'activerecord', '>= 4.2.7.1'
 
-gem 'haml', '~> 4.0.7'
+gem 'haml', '~> 5.1.0'
 gem 'foundation-rails', '~> 5.5.3.2'
 gem 'devise', '~> 4.6.2'
 
