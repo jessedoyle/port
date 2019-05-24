@@ -12,7 +12,7 @@ describe DashboardController do
     context 'logged in' do
       before do
         @admin = create(:admin)
-        sign_in :admin, @admin
+        sign_in(@admin, scope: :admin)
       end
 
       it 'renders the admin template' do
