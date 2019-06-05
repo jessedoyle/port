@@ -28,7 +28,7 @@ gem 'activemodel', '>= 4.2.5.1'
 gem 'activerecord', '>= 4.2.7.1'
 
 gem 'haml', '~> 5.1.1'
-gem 'foundation-rails', '~> 5.5.3.2'
+gem 'foundation-rails', '~> 6.5.3.0'
 gem 'devise', '~> 4.6.2'
 
 group :development, :test do
