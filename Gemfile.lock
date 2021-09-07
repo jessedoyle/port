@@ -39,9 +39,9 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (6.0.4)
     bcrypt (3.1.13)
-    better_errors (2.1.1)
+    better_errors (2.8.0)
       coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
+      erubi (>= 1.0.0)
       rack (>= 0.9.0)
     binding_of_caller (0.7.3)
       debug_inspector (>= 0.0.1)
@@ -57,7 +57,7 @@ GEM
     capybara-webkit (1.15.1)
       capybara (>= 2.3, < 4.0)
       json
-    coderay (1.1.2)
+    coderay (1.1.3)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -77,6 +77,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+    erubi (1.10.0)
     erubis (2.7.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
@@ -217,7 +218,7 @@ DEPENDENCIES
   actionview (>= 4.2.7.1)
   activemodel (>= 4.2.5.1)
   activerecord (>= 4.2.7.1)
-  better_errors (~> 2.1.1)
+  better_errors (~> 2.8.0)
   binding_of_caller (~> 0.7.2)
   byebug
   capybara (~> 2.18.0)
